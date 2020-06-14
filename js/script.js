@@ -457,8 +457,9 @@ var streets = L.layerGroup([SV1, SV2, SV3, SV4, SV5, SV6, SV7, SV8, SV9, SV10, S
 
 // mini map
 	// overlay detailed urban place names on locator map using Mapbox Studio
-  	var mapboxUrl='http://a.tiles.mapbox.com/v3/mapbox.world-light/{z}/{x}/{y}.png';
-	var mb = new L.TileLayer(mapboxUrl, {minZoom: 4, maxZoom: 16});
+	var CartoLight = 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
+  	//var mapboxUrl='http://a.tiles.mapbox.com/v3/mapbox.world-light/{z}/{x}/{y}.png';
+	var mb = new L.TileLayer(CartoLight, {minZoom: 4, maxZoom: 16});
 	var miniMap = new L.Control.MiniMap(mb, { toggleDisplay: true }).addTo(map);   
 
 /*	
