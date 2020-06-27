@@ -449,8 +449,8 @@ var streets = L.layerGroup([SV1, SV2, SV3, SV4, SV5, SV6, SV7, SV8, SV9, SV10, S
 		var overlayMaps = {	 
 		"conservation": conserv.addTo(map),		
 		"natural habitats": layer,
-		"coastal population": population,
-		"instant street view": streets,
+		"coastal population": population.addTo(map),
+		"instant street view": streets.addTo(map),
 		};
 		L.control.layers(baseMaps, overlayMaps, {position: 'topleft', collapsed: false}).addTo(map);
 	});
